@@ -1,0 +1,12 @@
+#filename: sparql1-quiz-001.rq
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+SELECT ?s ?o
+WHERE {
+	?s dc:language "en" .
+	?s dc:title ?o .
+	
+ 	FILTER (regex(?o,"humanities","i"))
+}
